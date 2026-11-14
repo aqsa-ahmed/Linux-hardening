@@ -1,0 +1,33 @@
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Sat 2026-11-14 07:28:49 UTC; 30min ago
+ Invocation: 4ed015bf947d47bf874a739b9e926646
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 16052 (sshd)
+      Tasks: 1 (limit: 1883)
+     Memory: 3.2M (peak: 4.7M)
+        CPU: 378ms
+     CGroup: /system.slice/ssh.service
+             └─16052 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Nov 14 07:28:48 skillup-server systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Nov 14 07:28:49 skillup-server sshd[16052]: Server listening on 0.0.0.0 port 22.
+Nov 14 07:28:49 skillup-server sshd[16052]: Server listening on :: port 22.
+Nov 14 07:28:49 skillup-server systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Nov 14 07:31:02 skillup-server sshd-session[16064]: Connection reset by authenticating user aqsa 10.0.2.2 port 56234 [preauth]
+Nov 14 07:38:09 skillup-server sshd-session[16151]: Accepted publickey for aqsa from 10.0.2.2 port 56239 ssh2: ED25519 SHA256:gsWiOQsEujj2iKZioJc/smcb5BgtU6RpF4J5HAE1hi0
+Nov 14 07:38:09 skillup-server sshd-session[16151]: pam_unix(sshd:session): session opened for user aqsa(uid=1000) by aqsa(uid=0)
+
+● ufw.service - Uncomplicated firewall
+     Loaded: loaded (/usr/lib/systemd/system/ufw.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2026-11-14 05:57:17 UTC; 2h 2min ago
+ Invocation: f95107cbc0e54bcc8c7effaaac1936bf
+       Docs: man:ufw(8)
+   Main PID: 670 (code=exited, status=0/SUCCESS)
+   Mem peak: 1.9M
+        CPU: 22ms
+
+Nov 14 05:57:17 skillup-server systemd[1]: Starting ufw.service - Uncomplicated firewall...
+Nov 14 05:57:17 skillup-server systemd[1]: Finished ufw.service - Uncomplicated firewall.
